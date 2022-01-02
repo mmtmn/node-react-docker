@@ -1,11 +1,13 @@
+import React, {useState} from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1> Hello world from react</h1>
-    </div>
-  );
-}
+export default function App() {
+  const [num, setNum] = useState(0)
 
-export default App;
+  return (
+    <>
+      <p>Valor: {num} </p>
+      <button onClick={() => setNum(num+1)}>+1</button>
+    </>
+  )
+}
